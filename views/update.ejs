@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update User</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+</head>
+<body class="bg-slate-900">
+    <a href="/read" class="text-sky-700 p-4 flex items-center gap-2">
+        <i class="fas fa-arrow-left"></i>
+        Previous Page
+    </a>
+    <div class="text-3xl text-white p-8 text-center">Update User</div>
+    <form action="/update/<%=editData._id%>" method="post" id="form" class="mx-auto max-w-lg p-8 bg-slate-800 rounded-lg shadow-md">
+        <div class="flex flex-wrap gap-4 mb-4">
+            <label for="name" class="text-gray-300">Name:</label>
+            <input type="text" name="name" required id="name" value="<%=editData.name%>" class="bg-slate-900 border p-1 border-pink-800 text-gray-300 text-center outline-none w-full">
+        </div>
+        <div class="flex flex-wrap gap-4 mb-4">
+            <label for="email" class="text-gray-300">Email:</label>
+            <input type="email" name="email" required id="email" value="<%=editData.email%>" class="bg-slate-900 border p-1 border-pink-800 text-gray-300 text-center outline-none w-full">
+        </div>
+        <div class="flex flex-wrap gap-4 mb-4">
+            <label for="img" class="text-gray-300">Image URL:</label>
+            <input type="text" name="img" required id="img" value="<%=editData.image%>" class="bg-slate-900 border p-1 border-pink-800 text-gray-300 text-center outline-none w-full">
+        </div>
+        <button type="submit" class="bg-yellow-700 text-slate-900 p-2 rounded-lg w-full">
+            <i class="fas fa-edit"></i>
+            Update Details
+        </button>
+    </form>
+</body>
+</html>
