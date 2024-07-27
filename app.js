@@ -51,7 +51,7 @@ res.render("update",{editData})
 })
 //UPDATE
  app.post('/update/:id' , async function(req,res){
-    await userModel.findOneAndUpdate({_id: req.params.id},{name : req.body.name},{email : req.body.email},{image : req.body.image},{new:true})
+   await userModel.findOneAndUpdate({_id: req.params.id},{name : req.body.name,email : req.body.email,image : req.body.img},{new:true})
     res.redirect('/read')
  })
 app.listen(3000);
